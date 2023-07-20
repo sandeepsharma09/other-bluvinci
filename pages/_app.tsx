@@ -188,14 +188,14 @@ const wagmiClient = createClient({
 });
 
 const activeChainId = ChainId.Goerli;
-
+//  provider={wagmiClient.prov    ider}
 function ThirdwebProvider({ wagmiClient, children }: any) {
   const { data: signer } = useSigner();
   return (
     <ThirdwebSDKProvider
       activeChain={activeChainId}
       signer={signer as any}
-      provider={wagmiClient.provider}
+     
       queryClient={wagmiClient.queryClient as any}
     >
       {children}
