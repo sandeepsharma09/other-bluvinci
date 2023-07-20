@@ -193,7 +193,7 @@ function ThirdwebProvider({ wagmiClient, children }: any) {
   const { data: signer } = useSigner();
   return (
     <ThirdwebSDKProvider
-      desiredChainId={activeChainId}
+      activeChain={activeChainId}
       signer={signer as any}
       provider={wagmiClient.provider}
       queryClient={wagmiClient.queryClient as any}
